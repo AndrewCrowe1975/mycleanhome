@@ -1,0 +1,163 @@
+/* Style dynamic header to change background colour and move up on scroll event */
+
+.header {
+  background-color: var(--primary-blue);
+  padding-top: 1.25rem;
+  width: 100%;
+  position: fixed;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-bottom: 1.375rem;
+  z-index: 30;
+  transition: background-color 0.1s ease, padding 0.1s ease;
+  will-change: background-color, padding;
+}
+
+/* Style dynamic header on scroll event */
+
+.scrolled-header {
+  background-color: var(--white);
+  border-bottom-width: 1px;
+  border-bottom-color: var(--light-grey);
+  border-bottom-style: solid;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+/* Create flexbox inside header */
+
+.header-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* Create flex items to sit inside header wrapper */
+
+.left-container {
+  flex: 1 1 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  column-gap: min(1rem, 18px);
+}
+
+/* Style logo icon */
+
+.logo-icon {
+  fill: var(--primary-blue);
+  width: min(3.25rem, 76px);
+  stroke: var(--highlight);
+  stroke-width: 47px;
+  padding-left: 0.125rem;
+  padding-right: 0.125rem;
+  cursor: pointer;
+  transition: fill 0.1s ease, stroke 0.1s ease;
+}
+
+/* Style inline SVG logo icon on scroll event */
+
+.scrolled-logo-icon {
+fill: var(--white);
+stroke: var(--primary-blue);
+}
+
+/* Style icon to change stroke colour 
+on hover */
+
+.logo-icon-link:hover .logo-icon,
+.logo-icon-link:focus-visible .logo-icon {
+stroke: var(--dolphin-blue);
+}
+
+.logo-icon-link svg {
+  pointer-events: none;
+}
+
+/* Style logo text */
+
+.logo-text {
+font-family: Inter;
+font-size: min(1.1875rem, 26px);
+max-width: 7rem;
+font-weight: 600;
+color: var(--white);
+padding-top: 0.25rem;
+cursor: pointer;
+line-height: 1.2;
+letter-spacing: -0.3px;
+transition: color 0.1s ease;
+}
+
+/* Style logo text on scroll event */
+
+.scrolled-logo-text {
+color: var(--black);
+}
+
+.right-container {
+
+  flex: 1 1 40%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  column-gap: 1rem;
+}
+
+/* Style book clean CTA button */
+
+.book-clean-button {
+  background-color: var(--white);
+  width: 4.25rem;
+  height: 2.25rem;
+  border-radius: 0.25rem;
+  border: none;
+  color: var(--navy);
+  font-weight: 700;
+  font-family: Arial;
+  font-size: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+  transition: background-color 0.1s ease, color 0.1s ease;
+}
+
+.scrolled-book-clean-button {
+  background-color: var(--primary-blue);
+  color: var(--white);
+}
+
+/* Style hamburger menu button and icon */
+
+.hamburger-menu-button {
+  background-color: transparent;
+  border: none;
+  transition: background-color 0.1s ease;
+}
+
+.hamburger-menu-icon {
+  stroke: var(--white);
+  width: 2rem;
+  stroke-width: 0.125rem;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  cursor: pointer;
+  transition: stroke 0.1s ease;
+}
+
+.hamburger-menu-button:hover,
+.hamburger-menu-button:focus-visible {
+  .hamburger-menu-icon {
+    stroke: var(--dolphin-blue);  
+  }
+}
+
+.scrolled-hamburger-menu-icon {
+  stroke: var(--black);
+}
+
+.book-clean-button:hover,
+.book-clean-button:focus-visible {
+  background-color: var(--dolphin-blue);
+  color: var(--white);
+}

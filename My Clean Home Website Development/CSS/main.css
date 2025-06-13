@@ -1,0 +1,14 @@
+/*  Import all CSS and link to HTML (all code will placed in a single file without importing when ready to deploy  */
+
+@import "Base/reset.css";
+@import "Base/typography.css";
+@import "Base/variables.css";
+
+@import "Utilities/debugging.css";
+
+@import "Pages/homepage.css";
+
+@import "Components/header.css";
+@import "Components/hero-section.css";
+@import "Components/mobile-nav.css";
+@import "Components/section-2.css";
