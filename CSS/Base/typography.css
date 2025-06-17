@@ -1,0 +1,42 @@
+/*  Reset font size to avoid inheritance issue with use of rem units  */
+
+html {
+  font-size: 100%;
+}
+
+/*  Reset line height and create font stack  */
+
+body {
+  line-height: 1.5;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+}
+
+/*  Load Inter font family style  */
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../../Assets/Fonts/inter-regular.woff2') format('woff2');
+  font-weight: 400; 
+  font-display: swap; 
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../../Assets/Fonts/inter-medium.woff2') format('woff2');
+  font-weight: 500; 
+  font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../../Assets/Fonts/inter-semiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../../Assets/Fonts/inter-bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}

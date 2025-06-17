@@ -1,0 +1,56 @@
+/*  Define primary colours as variables  */
+
+:root {
+  --primary-blue: #0c91f0;
+  --highlight: #f0c043;
+  --dark-grey: #454545; /*  Primarily used for secondary text  */
+  --beige: #fef9ed;
+  --light-grey: #d8dcdf; /*  Primarily used for horizontal lines  */
+  --border-grey: #d9dddf; /*  Primarily used for borders  */
+  --black: #000000; /*  Primarily used for text  */
+  --white: #ffffff; /*  Used throughout but a variable grants control  */
+  --dolphin-blue: #02406c; /*  Primarily used for button text  */
+  --navy: #000080;
+}
+
+/*  Primary colours generally applied as follows:
+
+--primary-blue: 
+
+--highlight: 
+
+--dark-grey: 
+
+--beige: 
+
+--light-grey: 
+
+--border-grey: 
+
+--black: 
+
+--white: 
+
+--dolphin-blue: 
+
+--navy:  */ 
+
+/*  Redefine primary colours where user prefers a dark colour scheme  */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+  --primary-blue: #000000;
+  --highlight: #6b6b6b;
+  --navy: #373737;
+  --beige: d8dcdf;
+}
+}
+
+/*  Redefine primary colours where user prefers higher contrast  */
+
+@media (prefers-contrast: more) {
+  :root {
+  --primary-blue: #0a7ec8;
+  --highlight: #f5d47f;
+  }
+}

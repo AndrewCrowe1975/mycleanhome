@@ -1,0 +1,224 @@
+/* Style mobile nav to slide out on click event */
+
+.mobile-nav {
+  position: fixed;
+  padding-top: clamp(8px, 0.875rem, 14px);
+  top: 0px;
+  height: 100%;
+  z-index: 50;
+  overflow-x: hidden;
+  background-color: var(--white);
+  width: clamp(50%, 23.4375rem, 75%);
+  padding-left: 20px;
+  padding-right: 20px;
+  right: -100%;
+  border-left: 1px solid var(--light-grey);
+  transition: right 0.4s ease;
+  will-change: right;
+}
+
+.mobile-nav-open {
+ right: 0;
+}
+
+/* Style logo icon on mobile nav menu */
+
+.mobile-nav-logo-icon {
+  fill: var(--white);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: clamp(32px, 3.25rem, 60px);
+  stroke: var(--primary-blue);
+  stroke-width: 47px;
+  padding-top: 24px;      
+  padding-left: 2px;
+  padding-right: 2px;
+  margin-bottom: 0.75rem;
+  cursor: default;
+  transition: width 0.2s ease, margin-bottom 0.2s ease;
+}
+
+/* Remove default bullet points from mobile nav links  */
+
+.mobile-nav-links {
+  text-decoration: none;
+  color: var(--black);
+  font-weight: 600;
+  font-family: Arial;
+  font-size: clamp(10px, 1.0625rem, 1.0625rem);
+}
+
+.mobile-nav-links:hover,
+.mobile-nav-links:focus-visible {
+  color: #0775c4;
+}
+
+.mobile-nav-logo-text {
+  color: var(--black);
+  font-size: 1.375rem;
+  letter-spacing: -0.7px;
+  text-align: center;
+  margin-bottom: 0.625rem;
+  cursor: default;
+}
+
+.mobile-nav-header {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid var(--light-grey);
+  margin-bottom: 1rem;
+}
+
+.mobile-nav-strapline {
+  color: var(--dark-grey);
+  font-weight: 600;
+  font-size: clamp(8px, 0.875rem, 18px);
+  letter-spacing: -0.4px;
+  text-align: center;
+  margin-bottom: 1.375rem;
+  cursor: default;
+}
+
+.mobile-nav-listed-items {
+  list-style-type: none;
+  line-height: 2.85;
+}
+
+.mobile-nav-section-one {
+  border-bottom: 1px solid var(--light-grey);
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.mobile-nav-section-two {
+  background-color: var(--beige);
+  border-radius: 0.25rem;
+  padding: 0.625rem;
+  margin-bottom: 1.5rem;
+}
+
+.mobile-nav-help-heading {
+  font-weight: 700;
+  color: var(--black);
+  font-size: clamp(10px, 1rem, 22px);
+  padding-bottom: 0.625rem;
+  letter-spacing: -0.4;
+  cursor: default;
+}
+
+
+.mobile-nav-help-text {
+  font-weight: 600;
+  font-family: Inter;
+  line-height: 1.45;
+  color: var(--black);
+  font-size: clamp(8px, 0.8125rem, 16px);
+  letter-spacing: -0.4;
+  cursor: default;
+}
+
+.mobile-nav-inline-text-link {
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--black);
+  font-size: clamp(8px, 0.8125rem, 16px);
+  letter-spacing: -0.6;
+  text-decoration: underline;
+  text-underline-offset: 0.1875rem;
+  text-decoration-thickness: 1.5px;
+  text-decoration-color: var(--black);
+} 
+
+.mobile-nav-inline-text-link:hover,
+.mobile-nav-inline-text-link:focus-visible {
+  text-decoration-color: #0775c4;
+  color: #0775c4;
+}
+
+.mobile-nav-button-links {
+  display: block;
+  width: 100%;
+  background-color: var(--primary-blue);
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  color: var(--white);
+  padding: 10px 0.25rem 10px 0.25rem;
+  text-align: center;
+  font-weight: 700;
+  font-size: clamp(10px, 1rem,22px);
+  cursor: pointer;
+  text-decoration: none;
+  transition: width 0.2s ease, font-size 0.2s ease, background-color 0.2s ease;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mobile-nav-button-links:hover,
+.mobile-nav-button-links:focus-visible {
+  width: 95%;
+  background-color: #0989e4;
+  font-size: clamp(9px, 0.9375rem,21px);
+}
+
+#mobile-nav-log-in-link:focus-visible,
+#mobile-nav-log-in-link:hover {
+  background-color: #fafafa;
+}
+
+#mobile-nav-log-in-link {
+  background-color: var(--white);
+  color: var(--black);
+  border: 1px solid var(--border-grey);
+  padding: 9px 0.25rem 9px 0.25rem;
+}
+
+.mobile-nav-close-button {
+  position: absolute;
+  right: 20px;
+  fill: var(--black);
+  margin-top: -4px;
+  width: clamp(10px, 1rem, 1rem);
+  border: none;
+  background-color: var(--white);
+  margin-left: auto;
+  cursor: pointer;
+}
+
+#mobile-nav-close-button:focus-visible,
+#mobile-nav-close-button:hover {
+  fill: #0775c4;  
+}
+
+/* Create overlay effect when mobile nav menu is displayed */
+
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--black);
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 40;
+  display: none;
+  will-change: opacity;
+  transition: opacity 0.4s ease;
+}
+
+.overlay-triggered {
+  display: block;
+  left: 0;
+  opacity: 0.5;
+}
+
+.mobile-nav-help-icon {
+  vertical-align: bottom;
+  margin-bottom: 1px;
+  width: 18px;
+  stroke-width: 2px;
+  stroke: var(--black);
+  height: 18;
+  margin-left: -2px;
+}
