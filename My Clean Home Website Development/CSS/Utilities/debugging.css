@@ -1,6 +1,0 @@
-/*  Apply a red outline to any images that are missing an alt tag in HTML  */
-
-img:not(img[alt]) {
-  outline: 3px solid red;
-}
-
